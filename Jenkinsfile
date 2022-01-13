@@ -1,5 +1,5 @@
 pipeline {
-    agent {docker { image 'openjdk:15-oracle' }}
+    agent { any { image 'openjdk:15-oracle' } }
     tools {
         maven 'maven_3.8.4'
     }
