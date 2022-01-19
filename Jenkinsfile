@@ -1,8 +1,5 @@
 pipeline {
-    agent { docker 'openjdk:15-oracle'  }
-    tools {
-        maven 'myMaven'
-    }
+    agent { docker 'maven:3.8.4-jdk-11'  }
     stages {
         stage('startup') {
             steps {
