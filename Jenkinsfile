@@ -9,8 +9,8 @@ pipeline {
         }
         stage('build') {
             steps {
-                sh 'mvn clean install'
-                sh 'mvn -ple webgoat-server spring-boot:run'
+                sh 'mvn -eX clean install'
+                sh 'mvn -pl webgoat-server spring-boot:run'
             }
         }
     }
