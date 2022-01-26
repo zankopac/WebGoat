@@ -1,5 +1,5 @@
 pipeline {
-    agent { docker 'maven:3.8.4-jdk-11'  }
+    agent { docker 'maven:3.8.4-openjdk-17'  }
     stages {
         stage('startup') {
             steps {
@@ -10,7 +10,7 @@ pipeline {
         stage('build') {
             steps {
                 sh 'mvn clean install'
-                sh 'mvn -pl webgoat-server spring-boot:run'
+                sh 'mvn -ple webgoat-server spring-boot:run'
             }
         }
     }
