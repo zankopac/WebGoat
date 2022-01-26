@@ -9,7 +9,7 @@ pipeline {
         }
         stage('build') {
             steps {
-                sh 'mvn --error --debug clean install'
+                sh 'mvn --errors --debug clean install'
                 sh 'mvn -pl webgoat-server spring-boot:run'
             }
         }
